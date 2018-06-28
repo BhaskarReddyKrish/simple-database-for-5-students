@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+struct data
+{
+	char student_name[50];
+	char student_number[15];
+	int student_join;
+	float student_cgpa;
+
+};
+int main()
+{
+	struct data a[5];
+	int i;
+	for(i=0;i<5;i++)
+	{
+		printf("Enter details of student No:%d\n",i+1);
+		printf("Enter the Name of the student\n");
+		scanf("%s",&a[i].student_name);
+		printf("Enter the Roll Number of the student\n");
+		scanf("%s",&a[i].student_number);
+		printf("Enter the joing year of the student\n");
+		scanf("%d",&a[i].student_join);
+		printf("Enter the CGPA of the student\n");
+		scanf("%f",&a[i].student_cgpa);
+		printf("-------------------------------------\n");
+	}
+	
+	printf("S.No\tStudent Name\t\t\tRoll Number\t\t\tYear of Join\tCGPA\n");
+	for(i=0;i<5;i++)
+	{
+		printf("%d\t",i+1);
+		printf("%s",a[i].student_name);
+		printf("\t\t\t\t");
+		printf("%s",a[i].student_number);
+		printf("\t\t\t");
+		printf("%d",a[i].student_join);
+		printf("\t\t");
+		printf("%f",a[i].student_cgpa);
+		printf("\n");
+	}
+	return 0;
+
+}
